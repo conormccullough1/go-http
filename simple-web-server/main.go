@@ -17,7 +17,7 @@ GODEBUG=http2debug=2   # ... even more verbose, with frame dumps
 
 func main() {
 	fmt.Println("Access web server at https://localhost:1234")
-	h := http.FileServer(http.Dir("assets"))
+	h := http.FileServer(http.Dir("web"))
 	// Handlers. Root handler is the localhost:portnum URL, other is accessible at the /hello path in front of the URL
 	// root directory of the web page:
 	http.Handle("/", h)
